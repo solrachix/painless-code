@@ -1,18 +1,21 @@
 require('colors')
 const message = require('../message')
 
-const functionsName = ['lower', 'capitalize', 'toUpperCase']
+const functionsName = ['toUpperCase', 'lower', 'upper', 'capitalize']
 
 const functions = {
+  toUpperCase: function () {
+    return String(this)
+  },
   lower: function () {
     return String(this).toLowerCase()
+  },
+  upper: function () {
+    return String(this).toUpperCase()
   },
   capitalize: function () {
     return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase()
   },
-  toUpperCase: function () {
-    return String(this)
-  }
 }
 
 for (const name of functionsName) {
