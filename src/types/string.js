@@ -7,12 +7,8 @@ const functions = {
   toUpperCase: function () {
     return String(this)
   },
-  lower: function () {
-    return String(this).toLowerCase()
-  },
-  upper: function () {
-    return String(this).toUpperCase()
-  },
+  lower: String.prototype.toLowerCase,
+  upper: String.prototype.toUpperCase,
   capitalize: function () {
     return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase()
   },
