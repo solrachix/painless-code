@@ -1,11 +1,12 @@
 require('colors')
 const message = require('../message')
 
-const functionsName = ['add', 'remove']
+const functionsName = ['add', 'remove', 'addFirst']
 
 const functions = {
     add: Array.prototype.push,
-    remove: Array.prototype.pop
+    remove: Array.prototype.pop,
+    addFirst: Array.prototype.unshift
 }
 
 for (const name of functionsName) {
