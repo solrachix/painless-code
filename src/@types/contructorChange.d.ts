@@ -35,4 +35,9 @@ declare interface String {
    * @package Painless 
   */
   capitalize():  string,
+  /**
+   *  Capitalize the first alphabetic character of each word
+   * @package Painless 
+  */
+   title():  string,
 }
