@@ -10,7 +10,13 @@ declare interface Array<T> {
    * @param items Elements to insert at the start of the array.
    * @package Painless
    */
-   addFirst(...items: T[]): number
+  addFirst(...items: T[]): number
+  /**
+   * Inserts new elements at the end of an array, and returns the new length of the array.
+   * @param items Elements to insert at the end of the array.
+   * @package Painless
+   */
+  addLast(...items: T[]): number
   /**
    * Removes the last element from an array and returns it.
    * If the array is empty, undefined is returned and the array is not modified.
@@ -23,6 +29,12 @@ declare interface Array<T> {
    * @package Painless
    */
    removeFirst(...items: T[]): T | undefined
+  /**
+   * Appends new elements to the end of an array, and returns the new length of the array.
+   * @param items New elements to add to the array.
+   * @package Painless
+   */
+  removeLast(...items: T[]): T | undefined
 }
 
 declare interface String {
