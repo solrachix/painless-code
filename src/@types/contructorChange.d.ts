@@ -30,11 +30,19 @@ declare interface Array<T> {
    */
    removeFirst(...items: T[]): T | undefined
   /**
-   * Appends new elements to the end of an array, and returns the new length of the array.
-   * @param items New elements to add to the array.
+   * Checks if value is an empty object, collection, map, or set.
+   * Objects are considered empty if they have no own enumerable string keyed properties.
+   * Array-like values such as arguments objects, arrays, buffers, strings, or jQuery-like collections are considered empty if they have a length of 0. Similarly, maps and sets are considered empty if they have a size of 0.
    * @package Painless
    */
-  removeLast(...items: T[]): T | undefined
+   isEmpty(...items: T[]): T | undefined
+  /**
+   * Checks if value is not an empty object, collection, map, or set.
+   * Objects are considered empty if they have no own enumerable string keyed properties.
+   * Array-like values such as arguments objects, arrays, buffers, strings, or jQuery-like collections are considered empty if they have a length of 0. Similarly, maps and sets are considered empty if they have a size of 0.
+   * @package Painless
+   */
+  isFilled(...items: T[]): T | undefined
 }
 
 declare interface String {
