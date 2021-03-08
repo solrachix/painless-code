@@ -8,12 +8,8 @@ const functions = {
     return String(this)
   },
 
-  lower: function (this: string) {
-    return String(this).toLowerCase()
-  },
-  upper: function (this: string) {
-    return String(this).toUpperCase()
-  },
+  lower: String.prototype.toLowerCase,
+  upper: String.prototype.toUpperCase,
   capitalize: function (this: string) {
     return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase()
   },
