@@ -17,6 +17,12 @@ declare interface Array<T> {
    * @package Painless
    */
   remove(...items: T[]): T | undefined
+  /**
+   * Removes the first element from an array and returns it.
+   * If the array is empty, undefined is returned and the array is not modified.
+   * @package Painless
+   */
+   removeFirst(...items: T[]): T | undefined
 }
 
 declare interface String {

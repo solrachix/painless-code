@@ -1,12 +1,13 @@
 import 'colors'
 import message from '../message'
 
-const functionsName = ['add', 'remove', 'addFirst']
+const functionsName = ['add', 'addFirst', 'remove', 'removeFirst']
 
 const functions = {
     add: Array.prototype.push,
+    addFirst: Array.prototype.unshift,
     remove: Array.prototype.pop,
-    addFirst: Array.prototype.unshift
+    removeFirst: Array.prototype.shift
 }
 
 for (const name of functionsName) {
