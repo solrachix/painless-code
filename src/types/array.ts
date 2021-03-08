@@ -3,7 +3,11 @@ import isEmpty from 'lodash.isempty'
 
 import message from '../message'
 
-const functionsName = ['add', 'addFirst', 'addLast', 'remove', 'removeFirst', 'removeLast']
+const functionsName = [
+	'add', 'addFirst', 'addLast', 'remove', 'removeFirst', 'removeLast',
+	'isEmpty', 'isFilled',
+	'shuffle'
+]
 
 const functions = {
 	add: Array.prototype.push,
@@ -17,7 +21,22 @@ const functions = {
 	},
 	isFilled: function () {
 		return !isEmpty(this)
-	}
+	},
+	shuffle: function (this: unknown[]) {
+    let currentIndex = this.length, temporaryValue, randomIndex;
+
+    while (0 !== currentIndex) {
+
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      temporaryValue = this[currentIndex];
+      this[currentIndex] = this[randomIndex];
+      this[randomIndex] = temporaryValue;
+    }
+
+    return this
+  }
 }
 
 for (const name of functionsName) {
