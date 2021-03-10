@@ -84,4 +84,9 @@ declare interface String {
    * @package Painless 
   */
   camelCase():  string,
+  /**
+   *  Escapes the RegExp special characters "^", "$", "", ".", "*", "+", "?", "(", ")", "[", "]", "{", "}", and "|" in string.
+   * @package Painless 
+  */
+  escapeRegExp():  string,
 }
