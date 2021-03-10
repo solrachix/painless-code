@@ -1,7 +1,7 @@
 import 'colors'
 import message from '../message'
 
-const functionsName = ['toUpperCase', 'lower', 'upper', 'capitalize', 'title']
+const functionsName = ['toUpperCase', 'lower', 'upper', 'capitalize', 'title', 'camelCase']
 
 const functions = {
   toUpperCase: function (this: string) {
@@ -17,6 +17,10 @@ const functions = {
     return this.replace(/\w\S*/g, (str) => {
       return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase()
     })
+  },
+  camelCase: function (this: string) {
+    const text = this.replace(/[-_\s.]+(.)?/g, (_, c) => c ? c.toUpperCase() : '');
+    return text.substr(0, 1).toLowerCase() + text.substr(1);
   }
 }
 

@@ -75,8 +75,13 @@ declare interface String {
   */
   capitalize():  string,
   /**
-   *  Capitalize the first alphabetic character of each word
+   *  Capitalize the first alphabetic character of each word.
    * @package Painless 
   */
-   title():  string,
+  title():  string,
+  /**
+   *  Converts string to camel case.
+   * @package Painless 
+  */
+  camelCase():  string,
 }
