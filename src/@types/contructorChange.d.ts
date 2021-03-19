@@ -85,6 +85,14 @@ declare interface String {
   */
   camelCase():  string,
   /**
+   *  Converts string to kebabCase case.
+   * @example 
+   * "Test__test-_-Test--".kebabCase()
+   * // => 'test-test-test'
+   * @package Painless 
+  */
+  kebabCase():  string,
+  /**
    *  Escapes the RegExp special characters "^", "$", "", ".", "*", "+", "?", "(", ")", "[", "]", "{", "}", and "|" in string.
    * @package Painless 
   */
